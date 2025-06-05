@@ -1,8 +1,8 @@
 analysis:
   run_modal: True
   run_pushpull: False
-  run_timehistory: False
-  run_IDA: True
+  run_timehistory: True
+  run_IDA: False
 
 moment_rotation_options:
   pt_points: 5

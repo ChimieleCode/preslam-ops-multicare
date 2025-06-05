@@ -2,14 +2,12 @@ from pathlib import Path
 
 
 # Input paths
-###
 FRAME_PATHS: dict[str, Path] = {
     'steel_path': Path("./input/steel.json"),
     'tendon_path': Path("./input/tendon.json"),
     'timber_path': Path("./input/timber.json"),
     'frame_path': Path("./input/frame.json")
 }
-###
 PUSHOVER_PATH: Path = Path('./input/pushover.json')
 TIME_HISTORY_PATH: Path = Path('./input/time_history.json')
 TIME_HISTORY_IDA_PATH: Path = Path('./input/time_history_IDA.json')
