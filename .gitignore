@@ -175,7 +175,7 @@ cython_debug/
 .vscode
 
 output/IDA/*
-outpur/time_history/*
+output/time_history/*
 output/*.txt
 output/*.json
 output/*.csv

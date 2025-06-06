@@ -131,6 +131,7 @@ def get_acc_from_hdf5(hdf5_path: Path, group_name: str) -> npt.NDArray:
         # Get the time series from the group
         time_series = group['time_series']
         assert isinstance(time_series, h5py.Dataset), "Expected 'time_series' to be a dataset"
+        time_series = time_series[:]
 
     # Add time series to the accelerations to have absolute ones
     # Make the time series to a broadcastable shape
