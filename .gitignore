@@ -178,3 +178,4 @@ output/*
 output/IDA/*
 outpur/time_hisotry/*
 output/*.txt
+*.ipynb

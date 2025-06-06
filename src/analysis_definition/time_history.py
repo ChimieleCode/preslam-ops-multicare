@@ -15,8 +15,9 @@ from ..utils import clean_directory, export_to_json
 def run_time_history_analysis(frame: Frame,
                               time_history_analysis: TimeHistoryAnalysis,
                               structure_periods: List[float],
+                              waveform_folder: Path,
                               save_dir: Path = None,
-                              ida: bool = False) -> bool:
+                              is_ida: bool = False) -> bool:
     """
     Runs a time history analysis
 
@@ -131,7 +132,6 @@ def run_time_history_analysis(frame: Frame,
     bR = 2 * (om_2 - om_1) * frame.damping / (om_2**2 - om_1**2)
 
     # time series definition
-    time_series_input_folder = pth.IDA_TIMESERIES_INPUT_FOLDER if ida else pth.TIMESERIES_INPUT_FOLDER
     dt = time_history_analysis.time_step
     ops.timeSeries(
         'Path', 
@@ -139,7 +139,7 @@ def run_time_history_analysis(frame: Frame,
         '-dt', 
         dt, 
         '-filePath',
-        (time_series_input_folder / time_history_analysis.filename).__str__(),
+        (waveform_folder / time_history_analysis.filename).__str__(),
         '-factor', 
         time_history_analysis.scale_factor
     )

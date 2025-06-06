@@ -38,7 +38,8 @@ def run_time_history(time_history) -> bool:
     status = analyze.run_time_history_analysis(
         frame=frame,
         time_history_analysis=time_history,
-        structure_periods=structure_periods
+        structure_periods=structure_periods,
+        waveform_folder=Path(pth.TIMESERIES_INPUT_FOLDER)
     )
     # returns if the analysis Failed
     return status
