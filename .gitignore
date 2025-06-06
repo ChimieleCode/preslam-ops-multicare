@@ -174,8 +174,10 @@ cython_debug/
 .ruff_cache
 .vscode
 
-output/*
 output/IDA/*
-outpur/time_hisotry/*
+outpur/time_history/*
 output/*.txt
+output/*.json
+output/*.csv
+output/*.hdf5
 *.ipynb
