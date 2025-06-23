@@ -17,7 +17,7 @@ def main_modal(frame_paths: dict[str, Path]):
     scr.print_model(pth.MODEL_OUTPUT_PATH)
     scr.export_limit_states(frame, pth.LIMIT_STATE_GAP_VALUES)
 
-    structure_periods = analyze.run_modal_analysis(frame)
+    structure_periods = analyze.run_modal_analysis(frame, True)
     print(structure_periods)
 
 
